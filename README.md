@@ -24,6 +24,7 @@ iex> Supabase.Storage.list_buckets(%Supabase.Client{})
 ```
 
 ## Upload File inside bucket
+Initialize the Supabase client firt* [Supabase Potion documentation](https://hexdocs.pm/supabase_potion/readme.html#usage)
 
 ```elixir
 iex> {:ok, %Supabase.Client{} = client} = Myapp.Supabase.Client.get_client()
