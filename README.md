@@ -24,10 +24,13 @@ iex> Supabase.Storage.list_buckets(%Supabase.Client{})
 ```
 
 ## Upload File inside bucket
-Initialize the Supabase client firt* [Supabase Potion documentation](https://hexdocs.pm/supabase_potion/readme.html#usage)
+Secret Key : https://supabase.com/dashboard/project/[YOUR-PROJECT]/settings/api-keys/new
+<img width="600" height="550" alt="image" src="https://github.com/user-attachments/assets/8c74e441-909d-4644-b864-8cad72dbef14" />
+URL: https://supabase.com/dashboard/project/[YOUR-PROJECT]/settings/api
+
 
 ```elixir
-iex> {:ok, %Supabase.Client{} = client} = Myapp.Supabase.Client.get_client()
+iex> {:ok, client} = Myapp.Supabase.Client.get_client()
 iex> storage= Supabase.Storage.from(client, "yourbucket")
 iex> Supabase.Storage.File.upload(storage, "/file/path/local/file.jpg", "/folder/images/file.jpg")
 ```
