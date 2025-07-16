@@ -22,3 +22,11 @@ Now you can pass the Client to the `Supabase.Storage` functions:
 ```elixir
 iex> Supabase.Storage.list_buckets(%Supabase.Client{})
 ```
+
+## Upload File inside bucket
+
+```elixir
+iex> {:ok, %Supabase.Client{} = client} = Myapp.Supabase.Client.get_client()
+iex> storage= Supabase.Storage.from(client, "yourbucket")
+iex> Supabase.Storage.File.upload(storage, "/file/path/local/file.jpg", "/folder/images/file.jpg")
+```
